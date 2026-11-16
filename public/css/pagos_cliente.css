@@ -1,0 +1,11 @@
+#tablaPagos {
+    width: 100% !important;
+}
+
+#tablaPagos th {
+    white-space: nowrap;
+}
+
+#tablaPagos td {
+    vertical-align: middle;
+}

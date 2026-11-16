@@ -1,0 +1,160 @@
+
+.pedidos-container {
+    padding: 20px 0;
+}
+
+.pedidos-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.pedidos-encabezado h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #172554;
+}
+
+.pedidos-encabezado p {
+    color: #64748b;
+    margin: 0;
+}
+
+.pedidos-tabla-container,
+.pedido-productos,
+.pedido-detalle-resumen {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.pedidos-tabla-container th {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pedidos-tabla-container td {
+    color: #334155;
+    font-size: 14px;
+}
+
+.pedido-estado {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.estado-pendiente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.estado-revision {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.estado-aprobado {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.estado-rechazado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.estado-finalizado {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.estado-cancelado {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.estado-desconocido {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.pedidos-vacio {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 55px 20px;
+}
+
+.pedidos-vacio > i {
+    font-size: 48px;
+    color: #94a3b8;
+}
+
+.pedidos-vacio h3 {
+    margin-top: 15px;
+    color: #172554;
+}
+
+.pedidos-vacio p {
+    color: #64748b;
+}
+
+.pedido-detalle-resumen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.pedido-detalle-resumen div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.pedido-detalle-resumen span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.pedido-detalle-resumen strong {
+    color: #172554;
+}
+
+.pedido-detalle-resumen .pedido-total {
+    color: #2563eb;
+    font-size: 18px;
+}
+
+.pedido-productos h4 {
+    color: #172554;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .pedidos-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pedido-detalle-resumen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .pedido-detalle-resumen {
+        grid-template-columns: 1fr;
+    }
+}

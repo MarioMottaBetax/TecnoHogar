@@ -1,0 +1,343 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-card h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.auth-card > p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.auth-card label {
+    display: block;
+    margin: 18px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.auth-card input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.auth-card button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #1d4ed8;
+}
+
+.auth-error {
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 28px 22px;
+    }
+}
+/* Mensaje del cargo seleccionado */
+.auth-card .role-message {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.role-name {
+    font-weight: 800;
+}
+
+/* Administrador */
+.role-1 {
+    color: #7c3aed;
+}
+
+/* Vendedor */
+.role-2 {
+    color: #2563eb;
+}
+
+/* Técnico */
+.role-3 {
+    color: #059669;
+}
+
+
+/* =====================================
+   REGISTRO DE USUARIOS - TECNOHOGAR
+===================================== */
+
+.register-container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    background: #2563eb;
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 auto 10px;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+.register-header h1 {
+    font-size: 27px;
+    font-weight: 750;
+    color: #0f172a;
+}
+
+.register-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.register-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.09);
+    border: 1px solid #e2e8f0;
+}
+
+.form-heading {
+    margin-bottom: 28px;
+}
+
+.form-heading h2 {
+    font-size: 25px;
+    color: #0f172a;
+    margin-bottom: 7px;
+}
+
+.form-heading p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #0f172a;
+    font-size: 16px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.form-section h3 span {
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 6px 9px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.register-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.register-card .form-group label {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 650;
+    color: #334155;
+}
+
+.register-card .form-group input {
+    width: 100%;
+    height: 45px;
+    padding: 0 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.register-card .form-group input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.register-card .form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.register-card .full-width {
+    grid-column: 1 / -1;
+}
+
+.btn-register {
+    width: 100%;
+    height: 49px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 5px;
+}
+
+.btn-register:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.20);
+}
+
+.btn-register span {
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 22px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-container footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .register-container {
+        padding: 20px 12px;
+    }
+
+    .register-card {
+        padding: 23px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-card .full-width {
+        grid-column: auto;
+    }
+
+    .form-heading h2 {
+        font-size: 22px;
+    }
+}

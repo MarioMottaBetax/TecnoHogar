@@ -1,0 +1,459 @@
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN
+========================================= */
+
+:root {
+    --primary: #1264e8;
+    --primary-dark: #0845ae;
+    --secondary: #0c1d3b;
+    --text: #536176;
+    --light: #f4f8ff;
+    --white: #ffffff;
+    --border: #e4ebf5;
+    --shadow: 0 15px 40px rgba(12, 40, 85, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--secondary);
+    background: linear-gradient(135deg, #f4f8ff, #ffffff, #edf4ff);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   2. CONTENEDOR PRINCIPAL
+========================================= */
+
+.portal-container {
+    width: min(1150px, 90%);
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 20px;
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: var(--primary);
+}
+
+.back-home span {
+    font-size: 20px;
+}
+
+.portal-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 0;
+}
+
+
+/* =========================================
+   3. IDENTIDAD TECNOHOGAR
+========================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-bottom: 30px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1975ff, #0745b9);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0 6px 15px rgba(18, 100, 232, 0.2);
+}
+
+.brand-name {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--secondary);
+}
+
+.brand-name span {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   4. ENCABEZADO DEL PORTAL
+========================================= */
+
+.portal-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-tag {
+    display: block;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.portal-heading h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.portal-heading h1 span {
+    color: var(--primary);
+}
+
+.portal-heading p {
+    color: var(--text);
+    font-size: 14px;
+    margin-top: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. TARJETAS DE ACCESO
+========================================= */
+
+.access-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.access-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.access-card:hover {
+    transform: translateY(-5px);
+    border-color: #b8d1fa;
+}
+
+.access-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    background: #eaf2ff;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 23px;
+}
+
+.card-label {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.access-card h2 {
+    font-size: 25px;
+    margin: 8px 0 10px;
+}
+
+.access-card > p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+.access-card ul {
+    list-style: none;
+    margin: 20px 0 25px;
+}
+
+.access-card li {
+    color: #59677b;
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.access-card li::before {
+    content: "✓";
+    color: #16a776;
+    font-weight: 900;
+}
+
+.access-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 15px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+}
+
+.secondary-button {
+    background: var(--secondary);
+    color: white;
+}
+
+.secondary-button:hover {
+    background: #173d76;
+}
+
+.access-button span {
+    font-size: 19px;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #8290a3;
+    font-size: 11px;
+}
+
+.card-footer a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   6. TARJETAS DE ROLES
+========================================= */
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.role-card {
+    position: relative;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    min-height: 265px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    border-color: #9fc2fa;
+    box-shadow: 0 20px 45px rgba(12, 40, 85, 0.12);
+}
+
+.role-icon {
+    width: 52px;
+    height: 52px;
+    background: #eaf2ff;
+    color: var(--primary);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.role-number {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #a9b7ca;
+}
+
+.role-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    flex: 1;
+}
+
+.role-action {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.role-action span {
+    font-size: 19px;
+}
+
+
+/* =========================================
+   7. SEGURIDAD
+========================================= */
+
+.portal-security {
+    width: fit-content;
+    max-width: 100%;
+    margin: 35px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #718198;
+    font-size: 11px;
+    text-align: center;
+}
+
+.portal-security span {
+    color: #16a776;
+    font-size: 17px;
+}
+
+
+/* =========================================
+   8. PIE DE PÁGINA
+========================================= */
+
+.portal-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    color: #8997aa;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+/* =========================================
+   9. RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .role-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .role-card {
+        min-height: 230px;
+    }
+
+    .access-options {
+        gap: 15px;
+    }
+
+    .access-card {
+        padding: 24px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .portal-container {
+        width: 91%;
+    }
+
+    .portal-content {
+        padding: 40px 0;
+    }
+
+    .access-options {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .portal-heading {
+        margin-bottom: 30px;
+    }
+
+    .portal-heading h1 {
+        font-size: 32px;
+    }
+
+    .access-card > p {
+        min-height: auto;
+    }
+
+    .portal-security {
+        line-height: 1.7;
+    }
+
+}

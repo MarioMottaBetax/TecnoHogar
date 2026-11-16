@@ -1,0 +1,25 @@
+/* Contabilidad y Finanzas */
+
+#tablaIngresos,
+#tablaEgresos {
+    width: 100% !important;
+}
+
+#tablaIngresos th,
+#tablaEgresos th {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+#tablaIngresos td,
+#tablaEgresos td {
+    vertical-align: middle;
+}
+
+.contabilidad-resumen {
+    transition: transform 0.2s ease;
+}
+
+.contabilidad-resumen:hover {
+    transform: translateY(-3px);
+}

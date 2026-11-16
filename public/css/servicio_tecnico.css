@@ -1,0 +1,35 @@
+
+.service-history {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.service-history-item {
+    border-left: 3px solid #0d6efd;
+    padding: 10px 15px;
+    background: #f8fafc;
+    border-radius: 0 8px 8px 0;
+}
+
+.service-history-item strong {
+    color: #1e293b;
+}
+
+#tablaServicios {
+    width: 100% !important;
+}
+
+#tablaServicios th {
+    white-space: nowrap;
+}
+
+#tablaServicios td {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .service-history-item {
+        padding: 10px;
+    }
+}
