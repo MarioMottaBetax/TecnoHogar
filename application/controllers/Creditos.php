@@ -13,7 +13,7 @@ class Creditos extends CI_Controller
         $this->load->model('Credito_model');
 
         if (!$this->session->userdata('logueado')) {
-            redirect('auth/login');
+            redirect('auth/administrativo/1');
         }
 
         if ((int) $this->session->userdata('id_rol') !== 1) {

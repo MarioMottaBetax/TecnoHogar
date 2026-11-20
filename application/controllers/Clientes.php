@@ -14,7 +14,7 @@ class Clientes extends CI_Controller
 
         // Verificar sesión
         if (!$this->session->userdata('logueado')) {
-            redirect('login');
+            redirect('auth/administrativo/1');
         }
 
         // Solo administrador

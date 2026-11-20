@@ -13,10 +13,10 @@ class Ventas extends CI_Controller
         $this->load->model('Venta_model');
 
         if (!$this->session->userdata('logueado')) {
-            redirect('auth/login');
+            redirect('auth/administrativo/1');
         }
 
-        if ((int) $this->session->userdata('id_rol') !== 1) {
+        if (!in_array((int) $this->session->userdata('id_rol'), array(1, 2), true)) {
             show_error('No tienes permisos para acceder a este módulo.', 403);
         }
     }

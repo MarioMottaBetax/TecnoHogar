@@ -22,13 +22,13 @@ class Admin extends CI_Controller {
 
     public function dashboard()
 {
-    $this->load->model('Usuario_model');
+    $this->load->model('Dashboard_model');
 
     $data['titulo'] = 'Dashboard | TecnoHogar';
     $data['nombre'] = $this->session->userdata('nombre');
 
     // Indicador de clientes registrados
-    $data['total_clientes'] = $this->Usuario_model->contar_clientes();
+    $data = array_merge($data, $this->Dashboard_model->obtener_resumen());
 
     $this->load->view('Admin/layouts/header', $data);
     $this->load->view('Admin/layouts/sidebar');

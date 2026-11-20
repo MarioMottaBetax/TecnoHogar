@@ -16,7 +16,7 @@ class Cliente_productos extends CI_Controller
             !$this->session->userdata('logueado') ||
             $this->session->userdata('id_rol') != 4
         ) {
-            redirect('Auth/login_cliente');
+            redirect('auth/cliente');
         }
     }
 

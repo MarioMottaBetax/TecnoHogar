@@ -89,6 +89,11 @@
                                            class="btn btn-sm btn-outline-primary">
                                             Ver detalle
                                         </a>
+                                        <?php if ($pago->estado === 'Pendiente' && empty($pago->id_cuota)): ?>
+                                            <?= form_open('pagos/aprobar/' . $pago->id_pago, array('class' => 'd-inline')); ?>
+                                                <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('¿Aprobar este pago?');">Aprobar</button>
+                                            <?= form_close(); ?>
+                                        <?php endif; ?>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

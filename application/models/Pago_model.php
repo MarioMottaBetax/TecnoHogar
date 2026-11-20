@@ -229,6 +229,25 @@ public function registrar_pago($id_cuota, $monto, $metodo, $comprobante = null)
         return $this->db->select('id_metodo')->where('nombre_metodo', $metodo)->where('estado', 1)->get('metodo_pago')->row('id_metodo');
     }
 
+    public function aprobar_pago_pendiente($id_pago)
+    {
+        $this->db->trans_begin();
+        $pago = $this->db->query('SELECT * FROM pagos WHERE id_pago = ? FOR UPDATE', array($id_pago))->row();
+        if (!$pago || $pago->estado !== 'Pendiente' || !empty($pago->id_cuota)) {
+            $this->db->trans_rollback();
+            return false;
+        }
+
+        $this->db->where('id_pago', $id_pago)->where('estado', 'Pendiente')->update('pagos', array('estado' => 'Aprobado'));
+        $this->db->where('id_pedido', $pago->id_pedido)->where('estado', 2)->update('pedidos', array('estado' => 4));
+        if ($this->db->trans_status() === false || $this->db->affected_rows() !== 1) {
+            $this->db->trans_rollback();
+            return false;
+        }
+        $this->db->trans_commit();
+        return true;
+    }
+
 
     // Obtener pedido relacionado con una cuota
     private function obtener_pedido_por_cuota($id_cuota)

@@ -78,6 +78,8 @@ $route['auth/registro'] = 'auth/registro';
 $route['auth/guardar_registro'] = 'auth/guardar_registro';
 
 $route['admin/dashboard'] = 'admin/dashboard';
+$route['vendedor/dashboard'] = 'ventas/index';
+$route['tecnico/dashboard'] = 'servicio_tecnico/index';
 $route['404_override'] = '';
 
 $route['clientes'] = 'clientes/index';
@@ -111,6 +113,7 @@ $route['pagos'] = 'pagos/index';
 $route['pagos/crear'] = 'pagos/crear';
 $route['pagos/guardar'] = 'pagos/guardar';
 $route['pagos/detalle/(:num)'] = 'pagos/detalle/$1';
+$route['pagos/aprobar/(:num)'] = 'pagos/aprobar/$1';
 
 $route['usuarios'] = 'usuarios/index';
 $route['usuarios/crear'] = 'usuarios/crear';

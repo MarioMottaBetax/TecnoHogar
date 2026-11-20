@@ -14,7 +14,7 @@ class Reportes extends CI_Controller
 
         if (!$this->session->userdata('logueado') ||
             $this->session->userdata('id_rol') != 1) {
-            redirect('Auth/login_admin');
+            redirect('auth/administrativo/1');
         }
     }
 

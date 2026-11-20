@@ -14,7 +14,7 @@ class Pagos extends CI_Controller
 
         // Verificar sesión
         if (!$this->session->userdata('logueado')) {
-            redirect('auth/login');
+            redirect('auth/administrativo/1');
         }
 
         // Solo administrador
@@ -145,5 +145,21 @@ class Pagos extends CI_Controller
         $this->load->view('Admin/layouts/sidebar');
         $this->load->view('Admin/funciones/pagos/detalle', $data);
         $this->load->view('Admin/layouts/footer');
+    }
+
+    /** Aprueba un pago creado por el portal de clientes. */
+    public function aprobar($id)
+    {
+        if ($this->input->method(TRUE) !== 'POST') {
+            show_404();
+            return;
+        }
+
+        $resultado = $this->Pago_model->aprobar_pago_pendiente((int) $id);
+        $this->session->set_flashdata(
+            $resultado ? 'success' : 'error',
+            $resultado ? 'Pago aprobado y pedido actualizado correctamente.' : 'El pago no existe, ya fue procesado o no pudo aprobarse.'
+        );
+        redirect('pagos');
     }
 }

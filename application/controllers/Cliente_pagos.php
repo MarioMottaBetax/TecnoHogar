@@ -12,7 +12,7 @@ class Cliente_pagos extends CI_Controller {
 
         if (!$this->session->userdata('logueado') ||
             $this->session->userdata('id_rol') != 4) {
-            redirect('Auth/login_cliente');
+            redirect('auth/cliente');
         }
 
         $this->load->model('Cliente_pago_model');
